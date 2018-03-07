@@ -4,7 +4,7 @@
   "description": "My personal web site",
   "main": "index.js",
   "scripts": {
-    "gulp": "gulp",
+    "gulp": "gulp && gulp css:sourcemaps",
     "gulp:watch": "gulp task:watch"
   },
   "keywords": [
@@ -17,7 +17,12 @@
   "license": "MIT",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.2",
     "gulp-cli": "^2.0.1",
-    "gulp-htmlmin": "^4.0.0"
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4"
   }
 }

@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA,EACE,OAAQ,EACR,QAAS,EAEX,KACE,MAAO,KACP,OAAQ,MACR,QAAS,KACT,gBAAiB","file":"index.css","sourcesContent":["* {\n  margin: 0px;\n  padding: 0px; }\n\nbody {\n  width: 100%;\n  height: 100vh;\n  display: flex;\n  justify-content: space-around; }\n"]}

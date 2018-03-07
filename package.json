@@ -1,0 +1,23 @@
+{
+  "name": "personal-site",
+  "version": "1.0.0",
+  "description": "My personal web site",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "gulp",
+    "gulp:watch": "gulp task:watch"
+  },
+  "keywords": [
+    "web",
+    "website",
+    "personal",
+    "cv"
+  ],
+  "author": "@facosta0787",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cli": "^2.0.1",
+    "gulp-htmlmin": "^4.0.0"
+  }
+}

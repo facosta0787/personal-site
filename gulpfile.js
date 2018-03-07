@@ -22,7 +22,7 @@ gulp.task('css',function(){
   .pipe(gulp.dest(`${PATH_DIST}/css`))
 })
 
-gulp.task('css:sourcemaps',function(){
+gulp.task('css:prod',function(){
   return gulp.src(`${PATH_DIST}/css/**/*.css`)
   .pipe(sourcemaps.init())
   .pipe(cleanCSS({debug: true}, (details) => {
@@ -33,7 +33,7 @@ gulp.task('css:sourcemaps',function(){
   .pipe(gulp.dest(`${PATH_DIST}/css`))
 })
 
-gulp.task('css:prod',function(){
+gulp.task('css:autoprefixer',function(){
   return gulp.src(PATH_SASS)
   .pipe(sass( {outputStyle: 'compressed'} ).on('error', sass.logError))
   .pipe(autoprefixer())
@@ -46,5 +46,3 @@ gulp.task('task:watch',function(){
 })
 
 gulp.task('default',['htmlmin','css'])
-
-gulp.task('prod',['htmlmin','css:prod'])

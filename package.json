@@ -4,8 +4,9 @@
   "description": "My personal web site",
   "main": "index.js",
   "scripts": {
-    "gulp": "gulp && gulp css:sourcemaps",
-    "gulp:watch": "gulp task:watch"
+    "clean": "rm -r ./css",
+    "build": "npm run clean && gulp && gulp css:prod",
+    "dev": "npm run clean && gulp && gulp task:watch"
   },
   "keywords": [
     "web",

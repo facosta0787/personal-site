@@ -4,7 +4,7 @@
   "description": "My personal web site",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -r ./css",
+    "clean": "rm -r ./css && rm -f index.html",
     "build": "npm run clean && gulp && gulp css:prod",
     "dev": "npm run clean && gulp && gulp task:watch"
   },

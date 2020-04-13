@@ -1,26 +1,55 @@
 import React from 'react'
+import Granim from '../../packages/react-granim'
 import Avatar from '../components/Avatar'
 import Header from '../components/Header'
 
 function Home() {
+  const granimProps = {
+    direction: 'diagonal',
+    isPausedWhenNotInView: true,
+    states: {
+      'default-state': {
+        gradients: [
+          ['rgba(50, 50, 50, .9)', 'rgba(33, 33, 33, .9)'],
+          ['rgba(33, 33, 33, .9)', 'rgba(50, 50, 50, .9)'],
+        ],
+      },
+    },
+    // image: {
+    //   source: 'img/patt.png',
+    //   position: ['left', 'top'],
+    //   stretchMode: ['stretch', 'stretch'],
+    //   blendingMode: 'lighten',
+    // },
+    className: 'canva-background',
+  }
+
   return (
     <>
-      <Header />
-      <main>
-        <div className='avatar-container'>
-          <Avatar />
-        </div>
-        <h2>FELIPE ACOSTA</h2>
-        <h4>Front-End Developer</h4>
-      </main>
+      <Granim id='background' {...granimProps} />
+      <div className='content'>
+        <Header />
+        <main>
+          <div className='avatar-container'>
+            <Avatar />
+          </div>
+          <h2>FELIPE ACOSTA</h2>
+          <h4>Front-End Developer</h4>
+        </main>
+      </div>
 
       <style jsx>{`
+        .content {
+          position:relative;
+        }
+
         main {
           display: flex;
           justify-content: center;
           flex-direction: column;
           text-align: center;
           letter-spacing: 0.5px;
+          z-index: 1;
         }
 
         .avatar-container {
@@ -58,8 +87,17 @@ function Home() {
         }
 
         #__next {
-          background-image: linear-gradient(147deg, #323232 0%, #212121 74%);
           height: 100%;
+        }
+
+        .canva-background {
+          background-attachment: scroll;
+          background-clip: border-box;
+          background-color: #333333;
+          background-image: url("img/patt.png");
+          background-origin: padding-box;
+          background-position: 50% 50% !important;
+          background-repeat: repeat;
         }
       `}</style>
     </>

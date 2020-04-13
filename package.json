@@ -1,12 +1,13 @@
 {
   "name": "personal-site",
-  "version": "1.0.0",
-  "description": "My personal web site",
+  "version": "2.0.0",
+  "description": "Felipe Acosta personal site",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -r ./css && rm -f index.html",
-    "build": "npm run clean && gulp && gulp css:prod",
-    "dev": "npm run clean && gulp && gulp task:watch"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "next build && next export"
   },
   "keywords": [
     "web",
@@ -16,14 +17,9 @@
   ],
   "author": "@facosta0787",
   "license": "MIT",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
-    "gulp-clean-css": "^3.9.2",
-    "gulp-cli": "^2.0.1",
-    "gulp-concat": "^2.6.1",
-    "gulp-htmlmin": "^4.0.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.4"
+  "dependencies": {
+    "next": "^9.3.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }

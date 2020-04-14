@@ -13,8 +13,9 @@ function Avatar () {
 
         img {
           width: 50%;
+          max-width: 200px;
           border-radius: 50%;
-          border: 3px solid white;
+          border: 6px solid white;
         }
       `}</style>
     </figure>

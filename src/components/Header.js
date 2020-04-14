@@ -32,11 +32,20 @@ function Header() {
           font-family: 'Lora';
           font-style: italic;
           color: #fafafa;
+          display: flex;
+          flex-direction: column;
+          transition: all .5s ease-in-out;
         }
 
         header > .contact-info > p:first-child {
           opacity: 0.5;
-          margin-bottom: 3px;
+          margin: 0 25px 3px 0;
+        }
+
+        @media screen and (min-width: 768px) {
+          header > .contact-info {
+            flex-direction: row;
+          }
         }
       `}</style>
     </>

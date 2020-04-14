@@ -45,6 +45,9 @@ function Home() {
       <style jsx>{`
         .content {
           position: relative;
+          width: 100%;
+          max-width: 1024px;
+          margin: 0 auto;
         }
 
         main {
@@ -54,12 +57,14 @@ function Home() {
           text-align: center;
           letter-spacing: 0.5px;
           z-index: 1;
+          max-width: 1024px;
         }
 
         .avatar-container {
           margin-top: 30%;
           display: flex;
           justify-content: center;
+          transition: all 1s ease-in-out;
         }
 
         main > h2 {
@@ -73,6 +78,12 @@ function Home() {
           font-style: italic;
           font-size: 14px;
           font-weight: 400;
+        }
+
+        @media screen and (min-width: 768px) {
+          .avatar-container {
+            margin-top: 100px;
+          }
         }
       `}</style>
 

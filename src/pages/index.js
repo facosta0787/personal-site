@@ -1,7 +1,8 @@
 import React from 'react'
 import Granim from '../../packages/react-granim'
-import Avatar from '../components/Avatar'
 import Header from '../components/Header'
+import Avatar from '../components/Avatar'
+import Social from '../components/Social'
 
 function Home() {
   const granimProps = {
@@ -10,8 +11,8 @@ function Home() {
     states: {
       'default-state': {
         gradients: [
-          ['rgba(50, 50, 50, .9)', 'rgba(33, 33, 33, .9)'],
-          ['rgba(33, 33, 33, .9)', 'rgba(50, 50, 50, .9)'],
+          ['rgba(50, 50, 50, .85)', 'rgba(0, 0, 0, .85)'],
+          ['rgba(0, 0, 0, .85)', 'rgba(50, 50, 50, .85)'],
         ],
       },
     },
@@ -35,12 +36,15 @@ function Home() {
           </div>
           <h2>FELIPE ACOSTA</h2>
           <h4>Front-End Developer</h4>
+          <div className='social-container'>
+            <Social />
+          </div>
         </main>
       </div>
 
       <style jsx>{`
         .content {
-          position:relative;
+          position: relative;
         }
 
         main {
@@ -94,7 +98,7 @@ function Home() {
           background-attachment: scroll;
           background-clip: border-box;
           background-color: #333333;
-          background-image: url("img/patt.png");
+          background-image: url('img/patt.png');
           background-origin: padding-box;
           background-position: 50% 50% !important;
           background-repeat: repeat;

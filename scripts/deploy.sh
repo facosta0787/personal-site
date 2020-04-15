@@ -1,7 +1,11 @@
 #!/bin/bash
 
-DEPLOYMENT=$(npx now ls --all personal-site)
+PROD_URL="felipeacosta.now.sh"
 
-ID=$(node scripts/get-name.js $DEPLOYMENT)
+DEPLOYMENTS="$(npx now ls --all personal-site)" &&
+CURRENT_DEPLOYMENT="$(node scripts/get-name.js ${DEPLOYMENTS})" &&
 
-npx now alias set $ID felipeacosta.now.sh
+NEW_ID="$(npx now --prod --force)" &&
+npx now alias set ${ID} ${PROD_URL} &&
+npx now rm --yes ${CURRENT_DEPLOYMENT}
+

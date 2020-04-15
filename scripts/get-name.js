@@ -1,13 +1,11 @@
 #!/usr/bin/env node
 'use strict'
 
+const { exec } = require('child_process')
+
 function main () {
-  const args = process.argv
-  const deployment = args[9]
-
-  if (!deployment) process.exit(1)
-
-  console.log(deployment)
+  const deployments = process.argv.filter(item => item.includes('.now.sh'))
+  console.log(deployments.pop())
   process.exit(0)
 }
 

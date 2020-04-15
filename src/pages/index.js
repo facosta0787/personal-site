@@ -4,7 +4,7 @@ import Header from '../components/Header'
 import Avatar from '../components/Avatar'
 import Social from '../components/Social'
 
-import { csslocals, cssglobals, gradient } from './styles'
+import { home, homeGlobals, gradient } from '../styles/main'
 
 const { primary, secondary } = gradient
 
@@ -40,8 +40,8 @@ function Home() {
         </main>
       </div>
 
-      <style jsx>{csslocals}</style>
-      <style jsx global>{cssglobals}</style>
+      <style jsx>{home}</style>
+      <style jsx global>{homeGlobals}</style>
     </>
   )
 }

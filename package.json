@@ -21,7 +21,7 @@
     "start": "next start",
     "export": "next build && next export",
     "deploy": "sh scripts/deploy.sh",
-    "gh:pages": "npm run export && touch out/.nojekyll && git push origin :gh-pages && git subtree push --prefix out origin gh-pages && rm -rf out"
+    "deploy:gh": "sh scripts/gh-deploy.sh"
   },
   "dependencies": {
     "granim": "^2.0.0",

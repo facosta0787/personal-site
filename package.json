@@ -21,7 +21,7 @@
     "start": "next start",
     "export": "next build && next export",
     "deploy": "sh scripts/deploy.sh",
-    "gh:pages": "git branch -D gh-pages && git subtree push --prefix out origin gh-pages"
+    "gh:pages": "npm run export && git branch -D gh-pages && git subtree push --prefix out origin gh-pages && rm -rf out"
   },
   "dependencies": {
     "granim": "^2.0.0",

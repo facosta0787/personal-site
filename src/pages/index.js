@@ -4,30 +4,29 @@ import Header from '../components/Header'
 import Avatar from '../components/Avatar'
 import Social from '../components/Social'
 
+const gradient = {
+  primary: 'rgba(0, 0, 0, .85)',
+  secondary: 'rgba(51, 51, 51, .85)',
+}
+
 function Home() {
-  const granimProps = {
+  const granimConfig = {
     direction: 'diagonal',
     isPausedWhenNotInView: true,
     states: {
       'default-state': {
         gradients: [
-          ['rgba(50, 50, 50, .85)', 'rgba(0, 0, 0, .85)'],
-          ['rgba(0, 0, 0, .85)', 'rgba(50, 50, 50, .85)'],
+          [gradient.primary, gradient.secondary],
+          [gradient.secondary, gradient.primary],
         ],
       },
     },
-    // image: {
-    //   source: 'img/patt.png',
-    //   position: ['left', 'top'],
-    //   stretchMode: ['stretch', 'stretch'],
-    //   blendingMode: 'lighten',
-    // },
     className: 'canva-background',
   }
 
   return (
     <>
-      <Granim id='background' {...granimProps} />
+      <Granim id='background' {...granimConfig} />
       <div className='content'>
         <Header />
         <main>
@@ -98,7 +97,7 @@ function Home() {
           height: 100vh;
           font-family: 'Montserrat', sans-serif;
           color: #fff;
-          background-color: #323232;
+          background-color: ${gradient.primary};
         }
 
         #__next {
@@ -108,7 +107,6 @@ function Home() {
         .canva-background {
           background-attachment: scroll;
           background-clip: border-box;
-          background-color: #333333;
           background-image: url('img/patt.png');
           background-origin: padding-box;
           background-position: 50% 50% !important;

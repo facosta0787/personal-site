@@ -1,23 +1,12 @@
 import React from 'react'
 
+import { avatar } from '../styles/main'
+
 function Avatar () {
   return (
     <figure>
       <img src="img/avatar.jpg"></img>
-      <style jsx>{`
-        figure {
-          margin: 0;
-          padding: 0;
-          display: contents;
-        }
-
-        img {
-          width: 50%;
-          max-width: 200px;
-          border-radius: 50%;
-          border: 6px solid white;
-        }
-      `}</style>
+      <style jsx>{avatar}</style>
     </figure>
   )
 }

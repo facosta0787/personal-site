@@ -1,4 +1,6 @@
 #!/bin/bash
+git push origin :gh-pages
+
 npm run export &&
 touch out/.nojekyll &&
 cp CNAME out/CNAME &&

@@ -38,6 +38,10 @@ function Home() {
             <Social />
           </div>
         </main>
+        <footer>
+          <p>Medellín - Colombia</p>
+          <p>2020</p>
+        </footer>
       </div>
 
       <style jsx>{home}</style>

@@ -43,6 +43,22 @@ export const home = css`
     font-weight: 400;
   }
 
+  footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  footer > p {
+    font-size: .7rem;
+    opacity: .7;
+  }
+
   @media screen and (min-width: 768px) {
     .avatar-container {
       margin-top: 100px;

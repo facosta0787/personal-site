@@ -5,10 +5,12 @@ import Avatar from '../components/Avatar'
 import Social from '../components/Social'
 
 import { home, homeGlobals, gradient } from '../styles/main'
+import personalInfo from '../../config/personal-info'
 
 const { primary, secondary } = gradient
 
 function Home() {
+  const { title, name, job, email, mobil, city, year } = personalInfo
   const granimConfig = {
     direction: 'diagonal',
     isPausedWhenNotInView: true,
@@ -27,20 +29,20 @@ function Home() {
     <>
       <Granim id='background' {...granimConfig} />
       <div className='content'>
-        <Header />
+        <Header {...{mobil, email}}/>
         <main>
           <div className='avatar-container'>
             <Avatar />
           </div>
-          <h2>FELIPE ACOSTA</h2>
-          <h4>Front-End Developer</h4>
+          <h2>{name}</h2>
+          <h4>{job}</h4>
           <div className='social-container'>
             <Social />
           </div>
         </main>
         <footer>
-          <p>Medellín - Colombia</p>
-          <p>2020</p>
+          <p>{city}</p>
+          <p>{year}</p>
         </footer>
       </div>
 

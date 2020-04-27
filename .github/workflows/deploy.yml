@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: amondnet/now-deployment@v2
+      with:
+        zeit-token: ${{ secrets.VERCEL_TOKEN_ID }} # Required
+        github-token: ${{ secrets.GH_TOKEN }} #Optional
+        now-args: '--prod' #Optional
+        now-org-id: ${{ secrets.VERCEL_ORG_ID}}  #Required
+        now-project-id: ${{ secrets.VERCEL_PROJECT_ID}} #Required 
+        working-directory: ./

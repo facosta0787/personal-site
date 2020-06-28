@@ -149,7 +149,7 @@ export const avatar = css`
   }
 `
 
-export const social = css`
+export const socialList = css`
   ul {
     margin-top: 50px;
     width: 100%;
@@ -157,15 +157,17 @@ export const social = css`
     justify-content: center;
     list-style: none;
   }
+`
 
-  ul a {
+export const socialListItem = css`
+  a {
     text-decoration: none;
     color: white;
     opacity: 0.5;
     transition: opacity 0.3s ease-in-out;
   }
 
-  ul a:hover {
+  a:hover {
     opacity: 0.7;
   }
 `

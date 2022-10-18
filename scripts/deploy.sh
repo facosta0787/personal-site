@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PROD_URL="felipeacosta.now.sh"
+PROD_URL="felipedev.tk"
 
 DEPLOYMENTS="$(npx vercel ls personal-site)" &&
 CURRENT_DEPLOYMENT="$(node scripts/get-name.js ${DEPLOYMENTS})" &&
